@@ -5,7 +5,7 @@
 # set -u
 
 
-apt-add-repository ppa:ansible/ansible
+apt-add-repository ppa:ansible/ansible -y
 apt update -y
 apt install -y ansible
 ansible --version

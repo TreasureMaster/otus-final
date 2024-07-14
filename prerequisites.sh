@@ -7,7 +7,7 @@
 
 apt-add-repository ppa:ansible/ansible
 apt update -y
-apt install -y git ansible
+apt install -y ansible
 ansible --version
 
 echo "!!! Вставьте ip нод kubernetes в ansible/inventory.txt"

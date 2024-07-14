@@ -1,6 +1,6 @@
 ---
 - name: Test connections
-  hosts: all
+  hosts: kube
 
   tasks:
 

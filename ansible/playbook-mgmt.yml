@@ -1,0 +1,21 @@
+---
+- name: Insert self IP in config
+  hosts: mgmt
+  connection: local
+
+  tasks:
+
+  - name: Get self IP
+    shell: hostname -I
+    register: self_ip_raw
+
+  - name: Save IP
+    set_fact:
+      self_ip: "{{ self_ip_raw.stdout | trim }}"
+  # - name: Insert to inventory file
+  #   replace:
+  #     path: ./inventory.txt
+  #     regexp: '127.0.0.1'
+  #     replace: "{{ self_ip.stdout }}"
+  - name: view
+    debug: msg="{{ self_ip }}"
